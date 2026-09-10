@@ -12,6 +12,15 @@ const links = [
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
+    
+    const handleClick = (e, href) => {
+        e.preventDefault()
+        const target = document.querySelector(href)
+        if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+        setMenuOpen(false)
+    }
   return (
     <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50">
         <div className="hidden sm:flex items-center gap-2 bg-black/40 backdrop-blur-md border border-purple-500/30 rounded-full px-4 py-3">
@@ -19,6 +28,7 @@ const Navbar = () => {
                 <a
                     key={link.name}
                     href={link.href}
+                    onClick={(e) => handleClick(e, link.href)}
                     className='text-gray-300 hover:text-purple-400 text-sm font-medium px-3 py-1 rounded-full'
                 >
                     {link.name}

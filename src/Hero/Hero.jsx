@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section 
     id="home"
-    className="min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-28 sm:pt-32 pb-16"
+    className="scroll-mt-24 min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 pt-28 sm:pt-32 pb-16"
     >
         <span className="animate-float border border-purple-500 text-purple-300 text-xs sm:text-sm px-4 py-1 rounded-full mb-6 animate-fade-up [animation-delay:0.1s]">
             Available for new Projects
