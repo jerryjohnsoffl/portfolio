@@ -27,6 +27,28 @@ const Navbar = () => {
 
             }
         </div>
+
+        <div className="sm:hidden">
+            <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="bg-black/40 backdrop-blur-md border border-purple-500/30 rounded-full px-5 py-3 text-white"
+            >
+                Menu
+            </button>
+            {menuOpen && (
+                <div className="mt-2 flex flex-col gap-1 bg-black/70 backdrop-blur-md border border-purple-500/30 rounded-2xl p-3">
+                    {links.map((link) => (
+                        <a 
+                        key={link.name}
+                        href={link.href} 
+                        className="text-gray-300 hover:text-purple-400 text-sm font-medium text-center py-2"
+                        >
+                            {link.name}
+                        </a>
+                    ))}
+                </div>
+            )}
+        </div>
     </nav>
   )
 }

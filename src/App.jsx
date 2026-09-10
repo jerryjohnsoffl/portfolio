@@ -5,6 +5,7 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './Hero/Hero'
+import About from './About/About'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <div className="bg-black min-h-screen">
         <Navbar />
         <Hero />
+        <About />
       </div>
     </>
   )
