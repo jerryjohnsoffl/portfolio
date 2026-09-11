@@ -21,7 +21,7 @@ const Skills = () => {
     id="skills"
     className="scroll-mt-24 px-4 sm:px-6 py-16 sm:py-24 max-w-6xl mx-auto"
     >
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 opacity-0 animate-fade-up">
+        <h2 className="text-3xl text-center sm:text-4xl md:text-left font-bold text-white mb-10 opacity-0 animate-fade-up">
             Skills & Technologies
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
