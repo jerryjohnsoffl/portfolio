@@ -15,7 +15,12 @@ const Contact = () => {
         console.log('Form submitted:', formData)
         // add your form submission logic here
     }
-
+    const services =[
+        'Web & Mobile Development',
+        'UI/UX Design',
+        'Technical Consulting',
+        'Speaking & Workshops',
+    ]
 
   return (
     <section 
@@ -71,7 +76,29 @@ const Contact = () => {
                     </button>
                 </form>
             </div>
-            <div className=""></div>
+            <div className="flex-1 flex flex-col gap-8 opacity-0 animate-fade-up [animation-delay:0.2s]">
+                <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                    I'm always open to discussing new opportunities, creative
+                    projects, or partnerships. Whether you have a specific project in
+                    mind or just want to explore possibilities, I'd love to connect.
+                </p>
+                <div>
+                    <ul className="flex flex-col gap-3 mt-2">
+                        {services.map((item, index)=> (
+                            <li key={index} className="flex items-center gap-3 text-gray-300 text-sm">
+                                <span className="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div>
+                    <h3 className="text-white font-bold text-base mb-4">
+                        Connect with Me
+                    </h3>
+                    <Socials />
+                </div>
+            </div>
         </div>
     </section>
   )
