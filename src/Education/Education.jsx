@@ -19,7 +19,7 @@ const Education = () => {
             Education
         </h2>
         <div className="relative flex flex-col gap-8">
-            <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-purple-500/30"></div>
+            <div className="absolute left-2 top-0 bottom-0 w-0.5 bg-purple-500/30"></div>
             {EducationData.map((item, index) => (
                 <div 
                 key={index}
@@ -27,7 +27,7 @@ const Education = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
                 >
                     <div className="flex flex-col items-center z-10 shrink-0">
-                        <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center text-center justify-center text-white text-xs font-semibold"></div>
+                        <div className="w-4 h-4 rounded-full bg-purple-500 flex items-center text-center justify-center text-white text-xs font-semibold"></div>
                     </div>
                     <div className="flex-1 bg-[#111114] border border-purple-500/20 rounded-2xl p-5 sm:p-6">
                         <h3 className="text-white font-bold text-base sm:text-lg">
