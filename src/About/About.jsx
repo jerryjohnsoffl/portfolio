@@ -1,6 +1,9 @@
 import React from 'react'
 
 const About = () => {
+    const CurrentYear = new Date().getFullYear()
+    const year = CurrentYear - 2023
+    console.log(year)
   return (
     <section
     id="about" 
@@ -12,13 +15,7 @@ const About = () => {
                     About Me
                 </h2>
                 <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-4">
-                    I'm a passionate creative developer and designer with over 3
-                    years of experience building digital products that users love. I
-                    believe in the power of good design and clean code to solve real
-                    problems.
-                </p>
-                <p className="text-gray-400 text-sm sm:text-base leading-relaxed mb-4">
-                    I'm a passionate creative developer and designer with over 3
+                    I'm a passionate creative developer and designer with over {year+ " "}
                     years of experience building digital products that users love. I
                     believe in the power of good design and clean code to solve real
                     problems.
