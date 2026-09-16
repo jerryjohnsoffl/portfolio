@@ -13,7 +13,6 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('Form submitted:', formData)
-        // add your form submission logic here
     }
     const services =[
         'Web & Mobile Development',

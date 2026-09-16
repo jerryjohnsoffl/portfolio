@@ -9,10 +9,10 @@ import About from './About/About'
 import Skills from './Skills/Skills'
 import Education from './Education/Education'
 import Contact from './Contact/Contact'
+import Projects from './Projects/Projects'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
       <div className="bg-black min-h-screen">
@@ -21,6 +21,7 @@ function App() {
         <About />
         <Skills />
         <Education />
+        <Projects />
         <Contact />
       </div>
     </>
