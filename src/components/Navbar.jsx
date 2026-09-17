@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
 
 const links = [
     { name: 'Home', href: '#home' },
@@ -38,12 +39,16 @@ const Navbar = () => {
             }
         </div>
 
-        <div className="sm:hidden">
+        <div className="sm:hidden w-[calc(100vw-2rem)] max-w-md">
             <button
+            type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="bg-black/40 backdrop-blur-md border border-purple-500/30 rounded-full px-5 py-3 text-white"
+            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={menuOpen}
+            className="flex items-center bg-black/40 backdrop-blur-md border border-purple-500/30 rounded-full px-5 py-3 text-white"
             >
-                Menu
+                {menuOpen ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
+                <span className="ml-2">{menuOpen ? 'Close' : 'Menu'}</span>
             </button>
             {menuOpen && (
                 <div className="mt-2 flex flex-col gap-1 bg-black/70 backdrop-blur-md border border-purple-500/30 rounded-2xl p-3">
@@ -51,6 +56,7 @@ const Navbar = () => {
                         <a 
                         key={link.name}
                         href={link.href} 
+                        onClick={(e) => handleClick(e, link.href)}
                         className="text-gray-300 hover:text-purple-400 text-sm font-medium text-center py-2"
                         >
                             {link.name}
