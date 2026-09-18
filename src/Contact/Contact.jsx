@@ -16,7 +16,7 @@ const Contact = () => {
     }
     const services =[
         'Web & Mobile Development',
-        'UI/UX Design',
+        'ML Development',
         'Technical Consulting',
         'Speaking & Workshops',
     ]
@@ -76,13 +76,13 @@ const Contact = () => {
                 </form>
             </div>
             <div className="flex-1 flex flex-col gap-8 opacity-0 animate-fade-up [animation-delay:0.2s]">
-                <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                <p className="text-gray-400 text-center md:text-left text-sm sm:text-base leading-relaxed">
                     I'm always open to discussing new opportunities, creative
                     projects, or partnerships. Whether you have a specific project in
                     mind or just want to explore possibilities, I'd love to connect.
                 </p>
-                <div>
-                    <ul className="flex flex-col gap-3 mt-2">
+                <div className="flex flex-col gap-4 items-center md:block">
+                    <ul className="grid grid-cols-2 md:flex flex-col gap-3 mt-2">
                         {services.map((item, index)=> (
                             <li key={index} className="flex items-center gap-3 text-gray-300 text-sm">
                                 <span className="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
@@ -91,7 +91,7 @@ const Contact = () => {
                         ))}
                     </ul>
                 </div>
-                <div>
+                <div className="flex flex-col gap-4 items-center md:block">
                     <h3 className="text-white font-bold text-base mb-4">
                         Connect with Me
                     </h3>

@@ -39,7 +39,7 @@ const Navbar = () => {
             }
         </div>
 
-        <div className="sm:hidden w-[calc(100vw-2rem)] max-w-md">
+        <div className="block sm:hidden w-[calc(100vw-2rem)] max-w-md">
             <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
